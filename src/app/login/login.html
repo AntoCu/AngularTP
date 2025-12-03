@@ -1,0 +1,35 @@
+<div class="max-w-md mx-auto bg-[#f5e6c8]/10 border border-[#d8c39a] p-10 rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] mt-16 backdrop-blur-sm">
+
+  <h2 class="text-4xl font-bold text-[#e8d4a8] mb-8 text-center tracking-wider">
+    Connexion
+  </h2>
+
+  <form (submit)="onLogin()" class="flex flex-col gap-6">
+
+    <input
+      type="text"
+      placeholder="Nom d'utilisateur"
+      [(ngModel)]="username"
+      name="username"
+      required
+      class="px-4 py-3 rounded-lg bg-[#f5e6c8]/20 border border-[#c4a46d] text-[#f5e6c8] placeholder-[#d8c39a] focus:outline-none focus:ring-2 focus:ring-[#c4a46d]"
+    />
+
+    <input
+      type="password"
+      placeholder="Mot de passe"
+      [(ngModel)]="password"
+      name="password"
+      required
+      class="px-4 py-3 rounded-lg bg-[#f5e6c8]/20 border border-[#c4a46d] text-[#f5e6c8] placeholder-[#d8c39a] focus:outline-none focus:ring-2 focus:ring-[#c4a46d]"
+    />
+
+    <button
+      type="submit"
+      class="mt-4 px-6 py-3 bg-[#8b6b32] text-[#f5e6c8] border-2 border-[#c4a46d] rounded-lg 
+             hover:bg-[#a2814b] transition shadow-md hover:shadow-lg">
+      Se connecter
+    </button>
+  </form>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="max-w-xl mx-auto bg-[#f5e6c8]/10 border border-[#d8c39a] p-8 rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] mt-10 backdrop-blur-sm text-center">
+
+  <h2 class="text-3xl font-bold text-[#e8d4a8] mb-4 tracking-wider">
+    Bienvenue, {{ auth.username }} !
+  </h2>
+
+  <p class="text-lg text-[#f5e6c8] mb-8">
+    Vous êtes à présent connecté.
+  </p>
+
+  <button
+    (click)="auth.logout()"
+    class="px-6 py-3 bg-[#8b6b32] text-[#f5e6c8] border-2 border-[#c4a46d] rounded-lg 
+           hover:bg-[#a2814b] transition shadow-md hover:shadow-lg">
+    Se déconnecter
+  </button>
+
+</div>

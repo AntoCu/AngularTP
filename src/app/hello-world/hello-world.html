@@ -1,0 +1,37 @@
+<div class="max-w-3xl mx-auto text-center mt-10">
+
+  <h2 class="text-4xl font-bold text-[#e8d4a8] mb-8 tracking-wider">
+    Jeu de Memory
+  </h2>
+
+  <div class="grid grid-cols-4 gap-4 justify-center">
+
+    <div
+      class="w-20 h-20 flex items-center justify-center text-2xl font-bold cursor-pointer 
+             bg-[#f5e6c8]/10 border-2 border-[#d8c39a] rounded-lg shadow-md
+             hover:bg-[#f5e6c8]/20 transition"
+      *ngFor="let c of cartes"
+      (click)="choisirCarte(c)"
+      [ngClass]="{'trouve': c.trouve}"
+      [ngStyle]="{'border-color': c.trouve ? '#7bbf4a' : '#d8c39a'}">
+
+      <div *ngIf="c.revelee || c.trouve" class="text-[#f5e6c8]">
+        {{ c.valeur }}
+      </div>
+
+      <div *ngIf="!c.revelee && !c.trouve" class="text-[#c4a46d]">
+        ?
+      </div>
+
+    </div>
+
+  </div>
+
+  <button
+    (click)="init()"
+    class="mt-8 px-6 py-3 bg-[#8b6b32] text-[#f5e6c8] border-2 border-[#c4a46d] rounded-lg 
+           hover:bg-[#a2814b] transition shadow-md hover:shadow-lg">
+    Rejouer
+  </button>
+
+</div>

@@ -1,0 +1,23 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background: #eee;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card.trouve {
+    background-color: #c0ffc0;
+}
